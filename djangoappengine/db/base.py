@@ -287,7 +287,7 @@ class DatabaseWrapper(NonrelDatabaseWrapper):
     def __init__(self, *args, **kwds):
         super(DatabaseWrapper, self).__init__(*args, **kwds)
         self.features = DatabaseFeatures(self)
-        self.ops = DatabaseOperations(self)
+        self.ops = DatabaseOperations()
         self.client = DatabaseClient(self)
         self.creation = DatabaseCreation(self)
         self.validation = DatabaseValidation(self)
